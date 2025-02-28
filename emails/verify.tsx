@@ -69,7 +69,7 @@ export default function EmailVerify() {
           />
           <Text>A request has been made to access the platform using this email address. If you didn't request this email, no further action is required, you can safely ignore it. To continue, please enter the following verification code:</Text>
           <Section style={styleSectionCode}>
-            <Heading as="h1" m="0" style={styleCode}>{"{{code}}"}</Heading>
+            <Text style={styleCode}>{"{{code}}"}</Text>
             <Text style={styleCodeExpiration}>Valid for 50 minutes</Text>
             <Text style={styleCodeNotShare}>Don't share it with anyone</Text>
             <Text style={styleLocation}>{"{{location}}"}</Text>
@@ -78,10 +78,7 @@ export default function EmailVerify() {
           <Hr style={styleLine} />
           <Section style={styleFooter}>
             <Text><Link href={urlContact} target="_blank" style={styleLink}>Contact</Link> • <Link href={urlTerms} target="_blank" style={styleLink}>Terms</Link> • <Link href={urlPrivacy} target="_blank" style={styleLink}>Privacy Policy</Link></Text>
-            <Section>
-              <Text style={styleCopyright}>Copyright © {"{{copyrightYear}}"} profile.rocks</Text>
-              <Text style={styleAllRights}>All rights reserved</Text>
-            </Section>
+            <Text style={styleCopyright}>Copyright © {"{{copyrightYear}}"} profile.rocks<br />All rights reserved</Text>
           </Section>
         </Container>
       </Body>
@@ -111,7 +108,7 @@ const styleLogo: React.CSSProperties = {
 
 const styleSectionCode: React.CSSProperties = {
   textAlign: "center",
-  marginTop: "1.5em"
+  marginTop: "2em"
 }
 
 const styleCode: React.CSSProperties = {
@@ -119,13 +116,14 @@ const styleCode: React.CSSProperties = {
   color: "#11DD88",
   letterSpacing: ".125em",
   fontVariantNumeric: "tabular-nums",
+  margin: "0",
   marginLeft: ".125em"
 }
 
 const styleCodeExpiration: React.CSSProperties = {
   fontSize: ".75em",
   color: "#FFFFFF",
-  marginTop: "10px",
+  marginTop: "20px",
   marginBottom: 0
 }
 
@@ -159,9 +157,4 @@ const styleLink: React.CSSProperties = {
 const styleCopyright: React.CSSProperties = {
   color: color3,
   margin: 0
-}
-
-const styleAllRights: React.CSSProperties = {
-  color: color3,
-  marginTop: 0
 }
