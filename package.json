@@ -1,18 +1,19 @@
 {
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development email dev",
+    "dev": "cross-env NODE_ENV=development email dev",
     "export": "email export",
     "build": "email build"
   },
   "dependencies": {
     "@react-email/components": "0.0.33",
-    "react-dom": "19.0.0",
-    "react": "19.0.0"
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.1",
+    "cross-env": "^7.0.3",
     "react-email": "3.0.7"
   }
 }
