@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "email dev",
+    "dev": "NODE_ENV=development email dev",
     "export": "email export",
     "build": "email build"
   },

@@ -16,10 +16,21 @@ import {
 import * as React from "react"
 
 
+let baseUrl: string, urlContact: string, urlTerms: string, urlPrivacy: string
 
-const baseUrl = process.env.URL
-  ? `https://${process.env.URL}`
-  : "/static"
+if (process.env.NODE_ENV === "development") {
+  baseUrl = "/static"
+  urlContact = "#/c"
+  urlTerms = "#/i/terms"
+  urlPrivacy = "#/i/privacy"
+} else {
+  baseUrl = "https://profile.rocks"
+  urlContact = `${baseUrl}/c`
+  urlTerms = `${baseUrl}/i/terms`
+  urlPrivacy = `${baseUrl}/i/privacy`
+}
+
+const srcLogo = `${baseUrl}/logo-long.png`
 
 
 const fallbackFontFamily: any[] = ["Roboto", "'Google Sans'", "Verdana", "Helvetica", "Georgia", "Arial", "sans-serif", "monospace"]
@@ -28,12 +39,6 @@ const webFont: React.ComponentProps<typeof Font>["webFont"] = {
   url: "https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2",
   format: "woff2"
 }
-
-const srcLogo = `${baseUrl}/logo-long.png`
-
-const urlContact = `${baseUrl}/c`
-const urlTerms = `${baseUrl}/i/terms`
-const urlPrivacy = `${baseUrl}/i/privacy`
 
 
 
@@ -50,9 +55,9 @@ export default function EmailVerify() {
           fontStyle="normal"
         />
         <title>Verify - profile.rocks</title>
-        <Preview>Verification code: {"{{code}}"}</Preview>
       </Head>
       <Body style={styleBody}>
+        <Preview>Verification code: {"{{code}}"}</Preview>
         <Container style={styleContainer}>
           <Img
             src={srcLogo}
