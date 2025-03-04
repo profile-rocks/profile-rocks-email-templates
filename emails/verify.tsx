@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === "development") {
   urlPrivacy = "#/i/privacy"
 } else {
   baseUrl = "https://profile.rocks"
-  urlContact = `${baseUrl}/c`
+  urlContact = `${baseUrl}/i/contact`
   urlTerms = `${baseUrl}/i/terms`
   urlPrivacy = `${baseUrl}/i/privacy`
 }
