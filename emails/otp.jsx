@@ -61,7 +61,6 @@ const styleCodeNotShare = {
  * @type {React.CSSProperties}
  */
 const styleLocation = {
-  color: "#a5a8a9",
   fontSize: "14px",
   marginBottom: 0,
   marginTop: "10px"

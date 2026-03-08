@@ -36,15 +36,15 @@ export default function EmailLayout({ children, title }) {
           <Hr style={styleLine} />
           <Section style={styleFooter}>
             <Text>
-              <Link href="https://www.profile.rocks/i/help" style={styleLink} target="_blank">
+              <Link href="https://www.profile.rocks/i/help" rel="noopener noreferrer" style={styleLink} target="_blank">
                 Help
               </Link>{" "}
               {SEPARATOR}{" "}
-              <Link href="https://www.profile.rocks/i/privacy" style={styleLink} target="_blank">
+              <Link href="https://www.profile.rocks/i/privacy" rel="noopener noreferrer" style={styleLink} target="_blank">
                 Privacy
               </Link>{" "}
               {SEPARATOR}{" "}
-              <Link href="https://www.profile.rocks/i/terms" style={styleLink} target="_blank">
+              <Link href="https://www.profile.rocks/i/terms" rel="noopener noreferrer" style={styleLink} target="_blank">
                 Terms
               </Link>
             </Text>
