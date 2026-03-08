@@ -1,20 +1,36 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development email dev",
-    "export": "email export",
-    "build": "email build"
+  "author": "Stefan Samson <ss42701@outlook.com> (https://ssbit01.github.io/)",
+  "bugs": {
+    "url": "https://github.com/profile-rocks/profile-rocks-app/issues"
   },
-  "dependencies": {
-    "@react-email/components": "1.0.8",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "react-email": "5.2.9"
-  },
+  "description": "profile.rocks email templates",
   "devDependencies": {
+    "@biomejs/biome": "2.4.6",
+    "@react-email/components": "^1.0.8",
     "@react-email/preview-server": "5.2.9",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "cross-env": "^10.1.0"
-  }
+    "cross-env": "^10.1.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-email": "^5.2.9"
+  },
+  "homepage": "https://github.com/profile-rocks/profile-rocks-app#readme",
+  "license": "MIT",
+  "name": "profile-rocks-email-templates",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/profile-rocks/profile-rocks-app.git"
+  },
+  "scripts": {
+    "biome:check": "biome check",
+    "biome:check:write": "biome check --write",
+    "biome:format": "biome format",
+    "biome:format:write": "biome format --write",
+    "build": "email build",
+    "dev": "cross-env NODE_ENV=development email dev",
+    "export": "email export"
+  },
+  "type": "module"
 }
