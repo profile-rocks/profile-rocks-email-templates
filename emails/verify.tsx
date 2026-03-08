@@ -37,11 +37,11 @@ if (process.env.NODE_ENV === "development") {
 export default function EmailVerify() {
 
   return (
-    <Html lang="en">
+    <Html lang="en" style={styleHtml}>
       <Head>
         <Font
           fontFamily="Inter"
-          fallbackFontFamily={["Roboto", "'Google Sans'", "Verdana", "Helvetica", "Georgia", "Arial", "sans-serif", "monospace"]}
+          fallbackFontFamily={["Arial", "Helvetica", "Verdana", "Georgia", "sans-serif", "monospace"]}
           webFont={{
             url: "https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2",
             format: "woff2"
@@ -82,11 +82,9 @@ export default function EmailVerify() {
 
 }
 
-
-
-const color3 = "#a5a8a9"
-const colorBorder = "#303335"
-
+const styleHtml: React.CSSProperties = {
+  colorScheme: "dark light"
+}
 
 const styleBody: React.CSSProperties = {
   color: "#c5c8c9",
@@ -103,7 +101,7 @@ const styleLogo: React.CSSProperties = {
 
 const styleSectionCode: React.CSSProperties = {
   textAlign: "center",
-  marginTop: "16px"
+  marginTop: "22px"
 }
 
 const styleCode: React.CSSProperties = {
@@ -116,29 +114,28 @@ const styleCode: React.CSSProperties = {
 }
 
 const styleCodeExpiration: React.CSSProperties = {
-  fontSize: ".75em",
+  fontSize: "14px",
   color: "#ddd",
   marginTop: "20px",
   marginBottom: 0
 }
 
 const styleCodeNotShare: React.CSSProperties = {
-  fontSize: ".75em",
+  fontSize: "14px",
   color: "#ddd",
   margin: 0
 }
 
 const styleLocation: React.CSSProperties = {
-  fontSize: ".75em",
+  fontSize: "14px",
+  color: "#a5a8a9",
   marginTop: "10px",
   marginBottom: 0
 }
 
 const styleLine: React.CSSProperties = {
-  color: colorBorder,
-  background: colorBorder,
-  borderColor: colorBorder,
-  marginTop: "2em"
+  borderColor: "#303335",
+  marginTop: "28px"
 }
 
 const styleFooter: React.CSSProperties = {
@@ -150,6 +147,6 @@ const styleLink: React.CSSProperties = {
 }
 
 const styleCopyright: React.CSSProperties = {
-  color: color3,
+  color: "#a5a8a9",
   margin: 0
 }
