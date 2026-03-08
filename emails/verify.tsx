@@ -3,7 +3,6 @@ import {
   Container,
   Font,
   Head,
-  Heading,
   Hr,
   Html,
   Img,
@@ -16,28 +15,21 @@ import {
 import * as React from "react"
 
 
-let baseUrl: string, urlContact: string, urlTerms: string, urlPrivacy: string
+let baseUrl: string,
+    urlContact: string,
+    urlTerms: string,
+    urlPrivacy: string
 
 if (process.env.NODE_ENV === "development") {
   baseUrl = "/static"
-  urlContact = "#/c"
+  urlContact = "#/i/contact"
   urlTerms = "#/i/terms"
   urlPrivacy = "#/i/privacy"
 } else {
-  baseUrl = "https://profile.rocks"
+  baseUrl = "https://www.profile.rocks"
   urlContact = `${baseUrl}/i/contact`
   urlTerms = `${baseUrl}/i/terms`
   urlPrivacy = `${baseUrl}/i/privacy`
-}
-
-const srcLogo = `${baseUrl}/logo-long.png`
-
-
-const fallbackFontFamily: any[] = ["Roboto", "'Google Sans'", "Verdana", "Helvetica", "Georgia", "Arial", "sans-serif", "monospace"]
-
-const webFont: React.ComponentProps<typeof Font>["webFont"] = {
-  url: "https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2",
-  format: "woff2"
 }
 
 
@@ -49,8 +41,11 @@ export default function EmailVerify() {
       <Head>
         <Font
           fontFamily="Inter"
-          fallbackFontFamily={fallbackFontFamily}
-          webFont={webFont}
+          fallbackFontFamily={["Roboto", "'Google Sans'", "Verdana", "Helvetica", "Georgia", "Arial", "sans-serif", "monospace"]}
+          webFont={{
+            url: "https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2",
+            format: "woff2"
+          }}
           fontWeight={400}
           fontStyle="normal"
         />
@@ -60,7 +55,7 @@ export default function EmailVerify() {
         <Preview>Verification code: {"{{code}}"}</Preview>
         <Container style={styleContainer}>
           <Img
-            src={srcLogo}
+            src={`${baseUrl}/logo-long.png`}
             width="290"
             height="48"
             alt="profile.rocks™"
@@ -70,7 +65,7 @@ export default function EmailVerify() {
           <Text>A request has been made to access the platform using this email address. If you didn't request this email, no further action is required, you can safely ignore it. To continue, please enter the following verification code:</Text>
           <Section style={styleSectionCode}>
             <Text style={styleCode}>{"{{code}}"}</Text>
-            <Text style={styleCodeExpiration}>Valid for 50 minutes</Text>
+            <Text style={styleCodeExpiration}>Valid for 5 minutes</Text>
             <Text style={styleCodeNotShare}>Don't share it with anyone</Text>
             <Text style={styleLocation}>{"{{location}}"}</Text>
           </Section>
@@ -89,17 +84,17 @@ export default function EmailVerify() {
 
 
 
-const color3 = "#777B7F"
-const colorBorder = "#303336"
+const color3 = "#a5a8a9"
+const colorBorder = "#303335"
 
 
 const styleBody: React.CSSProperties = {
-  color: "#C4C8CC",
-  backgroundColor: "#000000"
+  color: "#c5c8c9",
+  backgroundColor: "#000"
 }
 
 const styleContainer: React.CSSProperties = {
-  padding: "1em"
+  padding: "16px"
 }
 
 const styleLogo: React.CSSProperties = {
@@ -108,28 +103,28 @@ const styleLogo: React.CSSProperties = {
 
 const styleSectionCode: React.CSSProperties = {
   textAlign: "center",
-  marginTop: "2em"
+  marginTop: "16px"
 }
 
 const styleCode: React.CSSProperties = {
-  fontSize: "2.5em",
-  color: "#11DD88",
-  letterSpacing: ".125em",
+  fontSize: "28px",
+  color: "#1d8",
+  letterSpacing: "2px",
   fontVariantNumeric: "tabular-nums",
   margin: "0",
-  marginLeft: ".125em"
+  marginLeft: "2px"
 }
 
 const styleCodeExpiration: React.CSSProperties = {
   fontSize: ".75em",
-  color: "#FFFFFF",
+  color: "#ddd",
   marginTop: "20px",
   marginBottom: 0
 }
 
 const styleCodeNotShare: React.CSSProperties = {
   fontSize: ".75em",
-  color: "#FFFFFF",
+  color: "#ddd",
   margin: 0
 }
 
@@ -151,7 +146,7 @@ const styleFooter: React.CSSProperties = {
 }
 
 const styleLink: React.CSSProperties = {
-  color: "#00AF9F"
+  color: "#00af9f"
 }
 
 const styleCopyright: React.CSSProperties = {
