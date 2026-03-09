@@ -7,7 +7,9 @@ export default function EmailVerify() {
       <Text>You have been invited to join profile:</Text>
       <Text style={styleProfileNameId}>{"{{profileNameId}}"}</Text>
       <Text>To accept the invitation, please click on the button below:</Text>
-      <Link href="{{link}}" rel="noopener noreferrer" style={styleAcceptButton} target="_blank">Accept</Link>
+      <Link href="{{link}}" rel="noopener noreferrer" style={styleAcceptButton} target="_blank">
+        Accept
+      </Link>
     </EmailLayout>
   );
 }
@@ -17,16 +19,16 @@ export default function EmailVerify() {
  */
 const styleProfileNameId = {
   color: "#1d8"
-}
+};
 
 /**
  * @type {React.CSSProperties}
  */
 const styleAcceptButton = {
+  backgroundColor: "#2f3333",
   color: "#ddd",
   display: "block",
-  backgroundColor: "#2f3333",
   padding: "8px",
   textAlign: "center",
   userSelect: "none"
-}
+};

@@ -32,7 +32,9 @@ export default function EmailLayout({ children, title }) {
         <Container style={styleContainer}>
           <Img alt="profile.rocks™" draggable={false} height="45" src={BASE_URL + "/logo-long.png"} style={styleLogo} width="271" />
           {children}
-          <Text style={styleDisclaimer}>profile.rocks will never email you to ask to disclose or verify your credit card or banking account number.</Text>
+          <Text style={styleDisclaimer}>
+            profile.rocks will never email you to ask to disclose or verify your credit card or banking account number.
+          </Text>
           <Hr style={styleLine} />
           <Section style={styleFooter}>
             <Text>
@@ -85,15 +87,15 @@ const styleContainer = {
 
 const styleDisclaimer = {
   color: "#a5a8a9"
-}
+};
 
 /**
  * @type {React.CSSProperties}
  */
 const styleLogo = {
+  marginBottom: "24px",
   marginLeft: "auto",
   marginRight: "auto",
-  marginBottom: "24px",
   userSelect: "none"
 };
 
