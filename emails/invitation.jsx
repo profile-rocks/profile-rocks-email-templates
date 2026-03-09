@@ -5,7 +5,7 @@ export default function EmailVerify() {
   return (
     <EmailLayout title="Invitation">
       <Text>You have been invited to join profile:</Text>
-      <Text style={styleProfileNameId}>{"{{profileNameId}}"}</Text>
+      <Text style={styleProfileNameId}>{"{{profile}}"}</Text>
       <Text>To accept the invitation, please click on the button below:</Text>
       <Link
         href="https://app.profile.rocks/p/invitation/{{invitation}}"
