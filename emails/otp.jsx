@@ -5,7 +5,7 @@ export default function EmailVerify() {
   return (
     <EmailLayout title="Verify">
       <Text>
-        A request has been made to access the platform using this email address. If you didn't request this email, no further action is
+        A request has been made to access the platform using this email address. If you did not request this email, no further action is
         required, you can safely ignore it. To continue, please enter the following verification code:
       </Text>
       <Section style={styleSectionCode}>
