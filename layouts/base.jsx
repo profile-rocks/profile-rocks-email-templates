@@ -26,33 +26,27 @@ export default function EmailLayout({ children, title }) {
             url: "https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2"
           }}
         />
-        <title>{`${title} - profile.rocks`}</title>
+        <title>{`${title} | profile.rocks`}</title>
       </Head>
       <Body style={styleBody}>
         <Preview>Verification code: {"{{code}}"}</Preview>
         <Container style={styleContainer}>
           <Img alt="profile.rocks™" draggable={false} height="45" src={BASE_URL + "/logo-long.png"} style={styleLogo} width="271" />
           {children}
-          <Text style={styleDisclaimer}>profile.rocks will never email you to ask to disclose or verify your credit card or banking account number.</Text>
-          <Text style={styleDisclaimer}>Please do not reply to this email address, if you need assistance or simply want to get in touch, please visit the <CustomLink href="https://www.profile.rocks/i/contact">contact page</CustomLink> or send an email to {REPLY_EMAIL_ADDRESS}</Text>
+          <Text style={styleDisclaimer}>
+            profile.rocks will never email you to ask to disclose or verify your credit card or banking account number.
+          </Text>
+          <Text style={styleDisclaimer}>
+            Please do not reply to this email address, if you need assistance or simply want to get in touch, please visit the{" "}
+            <CustomLink href="https://www.profile.rocks/i/contact">contact page</CustomLink> or send an email to {REPLY_EMAIL_ADDRESS}
+          </Text>
           <Hr style={styleLine} />
           <Section style={styleFooter}>
             <Text>
-              <CustomLink href="https://www.profile.rocks/i/help">
-                Help
-              </CustomLink>{" "}
-              {SEPARATOR}{" "}
-              <CustomLink href="https://www.profile.rocks/i/privacy">
-                Privacy
-              </CustomLink>{" "}
-              {SEPARATOR}{" "}
-              <CustomLink href="https://www.profile.rocks/i/terms">
-                Terms
-              </CustomLink>{" "}
-              {SEPARATOR}{" "}
-              <CustomLink href="https://www.profile.rocks/i/legal-notice">
-                Legal Notice
-              </CustomLink>
+              <CustomLink href="https://www.profile.rocks/i/help">Help</CustomLink> {SEPARATOR}{" "}
+              <CustomLink href="https://www.profile.rocks/i/privacy">Privacy</CustomLink> {SEPARATOR}{" "}
+              <CustomLink href="https://www.profile.rocks/i/terms">Terms</CustomLink> {SEPARATOR}{" "}
+              <CustomLink href="https://www.profile.rocks/i/legal-notice">Legal Notice</CustomLink>
             </Text>
             <Text style={styleCopyright}>© {"{{year}}"} profile.rocks</Text>
             <Text style={styleCopyright}>All rights reserved</Text>

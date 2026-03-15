@@ -10,14 +10,14 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "es2024",
     "paths": {
       "#components/*": ["./components/*"],
       "#layouts/*": ["./layouts/*"]
-    }
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2024"
   },
   "exclude": ["node_modules", "out"]
 }

@@ -7,13 +7,18 @@ export default function EmailVerify() {
     <EmailLayout title="Invitation">
       <Text>You have been invited to join profile:</Text>
       <Text style={styleProfileNameId}>{"{{profile}}"}</Text>
-      <Text>If you did not expect this email, no further action is required, you can safely ignore it. You can accept the invitation inside the <CustomLink href="https://app.profile.rocks/">appication</CustomLink> or by clicking on the button below:</Text>
+      <Text>
+        If you did not expect this email, no further action is required, you can safely ignore it. You can accept the invitation inside the{" "}
+        <CustomLink href="https://app.profile.rocks/">appication</CustomLink> or by clicking the button below:
+      </Text>
       <Link
         href="https://app.profile.rocks/p/invitation/{{invitation}}"
         rel="noopener noreferrer"
         style={styleAcceptButton}
         target="_blank"
-      >Accept</Link>
+      >
+        Accept
+      </Link>
     </EmailLayout>
   );
 }

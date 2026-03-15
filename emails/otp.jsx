@@ -3,7 +3,7 @@ import EmailLayout from "#layouts/base";
 
 export default function EmailVerify() {
   return (
-    <EmailLayout title="Verify">
+    <EmailLayout title="Verify email address">
       <Text>
         A request has been made to access the platform using this email address. If you did not request this email, no further action is
         required, you can safely ignore it. To continue, please enter the following verification code:
@@ -12,7 +12,6 @@ export default function EmailVerify() {
         <Text style={styleCode}>{"{{code}}"}</Text>
         <Text style={styleCodeExpiration}>Valid for 5 minutes</Text>
         <Text style={styleCodeNotShare}>Don't share it with anyone</Text>
-        <Text style={styleLocation}>Login location detected by Cloudflare: {"{{location}}"}</Text>
       </Section>
     </EmailLayout>
   );
@@ -55,13 +54,4 @@ const styleCodeNotShare = {
   color: "#ddd",
   fontSize: "14px",
   margin: 0
-};
-
-/**
- * @type {React.CSSProperties}
- */
-const styleLocation = {
-  fontSize: "14px",
-  marginBottom: 0,
-  marginTop: "10px"
 };

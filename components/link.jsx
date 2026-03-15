@@ -5,7 +5,11 @@ import { Link } from "@react-email/components";
  * @param {Omit<Parameters<Link>[0],"rel"|"target">} props
  */
 export default function CustomLink({ children, ...props }) {
-  return <Link {...props} rel="noopener noreferrer" target="_blank" style={styleLink}>{children}</Link>
+  return (
+    <Link {...props} rel="noopener noreferrer" style={styleLink} target="_blank">
+      {children}
+    </Link>
+  );
 }
 
 /**
@@ -13,4 +17,4 @@ export default function CustomLink({ children, ...props }) {
  */
 const styleLink = {
   color: "#00af9f"
-}
+};
