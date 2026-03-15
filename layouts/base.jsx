@@ -2,7 +2,7 @@ import { Body, Container, Font, Head, Hr, Html, Img, Preview, Section, Text } fr
 import CustomLink from "../components/link";
 
 const BASE_URL = process.env.NODE_ENV === "development" ? "/static" : "https://www.profile.rocks";
-const REPLY_EMAIL_ADDRESS = process.env.REPLY_EMAIL_ADDRESS || "contact@support.profile.rocks";
+const REPLY_EMAIL_ADDRESS = process.env.REPLY_EMAIL_ADDRESS || "support@contact.profile.rocks";
 const SEPARATOR = "•";
 
 /**
