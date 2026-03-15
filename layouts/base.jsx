@@ -17,7 +17,7 @@ export default function EmailLayout({ children, title }) {
     <Html lang="en" style={styleHtml}>
       <Head>
         <Font
-          fallbackFontFamily={["Arial", "Helvetica", "Verdana", "Georgia", "sans-serif", "monospace"]}
+          fallbackFontFamily={["Helvetica", "Arial", "Verdana", "sans-serif", "monospace"]}
           fontFamily="Inter"
           fontStyle="normal"
           fontWeight={400}

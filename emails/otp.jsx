@@ -12,7 +12,7 @@ export default function EmailVerify() {
         <Text style={styleCode}>{"{{code}}"}</Text>
         <Text style={styleCodeExpiration}>Valid for 5 minutes</Text>
         <Text style={styleCodeNotShare}>Don't share it with anyone</Text>
-        <Text style={styleLocation}>{"{{location}}"}</Text>
+        <Text style={styleLocation}>Login location detected by Cloudflare: {"{{location}}"}</Text>
       </Section>
     </EmailLayout>
   );
