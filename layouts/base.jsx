@@ -1,8 +1,9 @@
 import { Body, Container, Font, Head, Hr, Html, Img, Preview, Section, Text } from "@react-email/components";
 import CustomLink from "../components/link";
 
-const SEPARATOR = "•";
 const BASE_URL = process.env.NODE_ENV === "development" ? "/static" : "https://www.profile.rocks";
+const REPLY_EMAIL_ADDRESS = process.env.REPLY_EMAIL_ADDRESS || "contact@support.profile.rocks";
+const SEPARATOR = "•";
 
 /**
  * @function
@@ -32,9 +33,8 @@ export default function EmailLayout({ children, title }) {
         <Container style={styleContainer}>
           <Img alt="profile.rocks™" draggable={false} height="45" src={BASE_URL + "/logo-long.png"} style={styleLogo} width="271" />
           {children}
-          <Text style={styleDisclaimer}>
-            profile.rocks will never email you to ask to disclose or verify your credit card or banking account number.
-          </Text>
+          <Text style={styleDisclaimer}>profile.rocks will never email you to ask to disclose or verify your credit card or banking account number.</Text>
+          <Text style={styleDisclaimer}>Please do not reply to this email address, if you need assistance or simply want to get in touch, please visit the <CustomLink href="https://www.profile.rocks/i/contact">contact page</CustomLink> or send an email to {REPLY_EMAIL_ADDRESS}</Text>
           <Hr style={styleLine} />
           <Section style={styleFooter}>
             <Text>
@@ -48,9 +48,14 @@ export default function EmailLayout({ children, title }) {
               {SEPARATOR}{" "}
               <CustomLink href="https://www.profile.rocks/i/terms">
                 Terms
+              </CustomLink>{" "}
+              {SEPARATOR}{" "}
+              <CustomLink href="https://www.profile.rocks/i/legal-notice">
+                Legal Notice
               </CustomLink>
             </Text>
-            <Text style={styleCopyright}>Copyright © {"{{year}}"} profile.rocks</Text>
+            <Text style={styleCopyright}>© {"{{year}}"} profile.rocks</Text>
+            <Text style={styleCopyright}>All rights reserved</Text>
           </Section>
         </Container>
       </Body>
