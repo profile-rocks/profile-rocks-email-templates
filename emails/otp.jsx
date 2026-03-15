@@ -1,5 +1,5 @@
 import { Section, Text } from "@react-email/components";
-import EmailLayout from "../layouts/base";
+import EmailLayout from "#layouts/base";
 
 export default function EmailVerify() {
   return (

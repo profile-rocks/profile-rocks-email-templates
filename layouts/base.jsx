@@ -1,7 +1,7 @@
-import { Body, Container, Font, Head, Hr, Html, Img, Link, Preview, Section, Text } from "@react-email/components";
+import { Body, Container, Font, Head, Hr, Html, Img, Preview, Section, Text } from "@react-email/components";
+import CustomLink from "../components/link";
 
 const SEPARATOR = "•";
-
 const BASE_URL = process.env.NODE_ENV === "development" ? "/static" : "https://www.profile.rocks";
 
 /**
@@ -38,23 +38,19 @@ export default function EmailLayout({ children, title }) {
           <Hr style={styleLine} />
           <Section style={styleFooter}>
             <Text>
-              <Link href="https://www.profile.rocks/i/help" rel="noopener noreferrer" style={styleLink} target="_blank">
+              <CustomLink href="https://www.profile.rocks/i/help">
                 Help
-              </Link>{" "}
+              </CustomLink>{" "}
               {SEPARATOR}{" "}
-              <Link href="https://www.profile.rocks/i/privacy" rel="noopener noreferrer" style={styleLink} target="_blank">
+              <CustomLink href="https://www.profile.rocks/i/privacy">
                 Privacy
-              </Link>{" "}
+              </CustomLink>{" "}
               {SEPARATOR}{" "}
-              <Link href="https://www.profile.rocks/i/terms" rel="noopener noreferrer" style={styleLink} target="_blank">
+              <CustomLink href="https://www.profile.rocks/i/terms">
                 Terms
-              </Link>
+              </CustomLink>
             </Text>
-            <Text style={styleCopyright}>
-              Copyright © {"{{copyrightYear}}"} profile.rocks
-              <br />
-              All rights reserved
-            </Text>
+            <Text style={styleCopyright}>Copyright © {"{{year}}"} profile.rocks</Text>
           </Section>
         </Container>
       </Body>
@@ -112,13 +108,6 @@ const styleLine = {
  */
 const styleFooter = {
   textAlign: "center"
-};
-
-/**
- * @type {React.CSSProperties}
- */
-const styleLink = {
-  color: "#00af9f"
 };
 
 /**
