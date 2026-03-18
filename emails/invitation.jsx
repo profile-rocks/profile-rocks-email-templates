@@ -4,12 +4,12 @@ import EmailLayout from "#layouts/base";
 
 export default function EmailVerify() {
   return (
-    <EmailLayout title="Invitation" preview={"Invitation to join profile: {{profile}}"}>
+    <EmailLayout title="Invitation" preview="You have been invited to join a profile.">
       <Text>You have been invited to join profile:</Text>
       <Text style={styleProfileNameId}>{"{{profile}}"}</Text>
       <Text>
         If you did not expect this email, no further action is required, you can safely ignore it. You can accept the invitation inside the{" "}
-        <CustomLink href="https://app.profile.rocks/">appication</CustomLink> or by clicking the button below:
+        <CustomLink href="https://app.profile.rocks/">application</CustomLink> or by clicking the button below:
       </Text>
       <Link
         href="https://app.profile.rocks/u/invitation/{{invitation}}"

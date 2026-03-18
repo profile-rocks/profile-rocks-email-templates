@@ -3,7 +3,7 @@ import EmailLayout from "#layouts/base";
 
 export default function EmailVerify() {
   return (
-    <EmailLayout title="Verify email address" preview="Verification code: {{code}}">
+    <EmailLayout title="Verify email address" preview="Use the code inside to continue.">
       <Text>
         A request has been made to access the platform using this email address. If you did not request this email, no further action is
         required, you can safely ignore it. To continue, please enter the following verification code:
