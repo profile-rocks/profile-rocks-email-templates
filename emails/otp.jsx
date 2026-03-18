@@ -9,7 +9,7 @@ export default function EmailVerify() {
         required, you can safely ignore it. To continue, please enter the following verification code:
       </Text>
       <Section style={styleSectionCode}>
-        <Text style={styleCode}>{"{{code}}"}</Text>
+        <Text style={styleCode}>{"{{otp}}"}</Text>
         <Text style={styleCodeExpiration}>Valid for 5 minutes</Text>
         <Text style={styleCodeNotShare}>Don't share it with anyone</Text>
       </Section>
